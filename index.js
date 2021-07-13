@@ -14,7 +14,7 @@ var app = express();
 app.set('superSecret', process.env.bcrypt_KEY);
 
 //connect to database
-mongoose.connect(process.env.DATABASE_URL,{ useNewUrlParser: true })
+mongoose.connect('mongodb+srv://userbot:userbot123@cluster0.v1x4z.mongodb.net/Cluster0?retryWrites=true&w=majority',{ useNewUrlParser: true })
   .then(() => console.log('connection successful'))
   .catch((err) => console.error(err));
 mongoose.Promise = global.Promise;
