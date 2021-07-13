@@ -14,7 +14,7 @@ var app = express();
 app.set('superSecret', process.env.bcrypt_KEY);
 
 //connect to database
-mongoose.connect('mongodb://localhost:27017/chatting_app_develop',{ useNewUrlParser: true })
+mongoose.connect('mongodb://mongo:SFvSPc2XM9TzqFAIVRUI@containers-us-west-1.railway.app:8053',{ useNewUrlParser: true })
   .then(() => console.log('connection successful'))
   .catch((err) => console.error(err));
 mongoose.Promise = global.Promise;
